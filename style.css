@@ -1,0 +1,18 @@
+#container{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(145, 208, 52);
+}
