@@ -28,7 +28,7 @@ function generateGrid(colSize, rowSize){
             col.appendChild(square);  
 
             square.addEventListener('mouseover', function(){
-            this.style.backgroundColor = 'lightblue';
+            this.style.backgroundColor = 'red';
             });
 
             console.log('append square');    
