@@ -1,18 +1,38 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
 #container{
     display: flex;
     justify-content: center;
+    width: 960px;
+    height: auto;
     gap: 8px;
 }
 
-.row{
+#adjust{
+    border: 0;
+    color: white;
+    background-color: rgb(227, 78, 78);
+    padding: 20px;
+    margin: 20px;
+}
+
+.col{
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 8px;
 }
 
 
 .square{
-    width: 100px;
-    height: 100px;
+    flex: 1;
+    aspect-ratio: 1 /1;
     background-color: rgb(145, 208, 52);
 }
