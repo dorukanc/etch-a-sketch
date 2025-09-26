@@ -38,5 +38,6 @@ function generateGrid(colSize, rowSize){
 
 adjust.addEventListener('click', function(){
     let userInput = getUserInput();
+    container.replaceChildren(); // remove existing grid
     generateGrid(userInput.colSize, userInput.rowSize);
 });
