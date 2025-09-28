@@ -16,6 +16,13 @@ function getUserInput(){
 }
 
 
+// random rgb color generate
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
+
+
 function generateGrid(colSize, rowSize){
     for(let i=1; i<=colSize; i++){
         const col = document.createElement('div');
@@ -27,10 +34,16 @@ function generateGrid(colSize, rowSize){
             square.className = 'square';  
             col.appendChild(square);  
 
+            let opacityCounter = 0;
             square.addEventListener('mouseover', function(){
-            this.style.backgroundColor = 'red';
-            });
+    
+            this.style.backgroundColor = random_rgba();
+            this.style.opacity = opacityCounter;
+            opacityCounter += 0.1;
+            opacityCounter = Math.min(opacityCounter, 1);
 
+            });
+            
             console.log('append square');    
         }
     }
